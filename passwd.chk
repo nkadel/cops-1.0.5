@@ -32,11 +32,11 @@
 #   If a line begins with a plus sign (+), it is a yellow pages entry.
 # See passwd(5) for more information, if this applies to your site.
 #
-AWK=/bin/awk
+AWK=/bin/gawk
 TEST=/bin/test
 ECHO=/bin/echo
-SORT=/usr/bin/sort
-UNIQ=/usr/bin/uniq
+SORT=/bin/sort
+UNIQ=/bin/uniq
 RM=/bin/rm
 YPCAT=/usr/bin/ypcat
 

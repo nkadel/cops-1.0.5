@@ -7,9 +7,9 @@
 #
 
 # commands 'n stuff:
-AWK=/bin/awk
+AWK=/bin/gawk
 SED=/bin/sed
-SORT=/usr/bin/sort
+SORT=/bin/sort
 MV=/bin/mv
 MAIL=/bin/mail
 CAT=/bin/cat

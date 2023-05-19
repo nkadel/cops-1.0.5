@@ -29,12 +29,12 @@
 # on a line by awking it.
 #
 #
-AWK=/bin/awk
+AWK=/bin/gawk
 SED=/bin/sed
 TEST=/bin/test
 ECHO=/bin/echo
 GREP=/bin/grep
-SORT=/usr/bin/sort
+SORT=/bin/sort
 EXPR=/bin/expr
 LS=/bin/ls
 

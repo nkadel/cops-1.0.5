@@ -73,8 +73,8 @@ secondary=root
 ftpuid=ftp
 
 # Where is everyone?
-AWK=/bin/awk
-EGREP=/usr/bin/egrep
+AWK=/bin/gawk
+EGREP=/bin/egrep
 LS=/bin/ls
 CMP=/bin/cmp
 RM=/bin/rm

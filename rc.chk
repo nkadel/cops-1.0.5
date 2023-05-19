@@ -26,12 +26,12 @@
 SED=/bin/sed
 CAT=/bin/cat
 RM=/bin/rm
-AWK=/bin/awk
+AWK=/bin/gawk
 LS=/bin/ls
 TEST=/bin/test
-EGREP=/usr/bin/egrep
+EGREP=/bin/egrep
 ECHO=/bin/echo
-SORT=/usr/bin/sort
+SORT=/bin/sort
 FIND=/bin/find
 
 # temp file for stuff:

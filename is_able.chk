@@ -15,7 +15,7 @@
 #
 TEST=/bin/test
 ECHO=/bin/echo
-AWK=/bin/awk
+AWK=/bin/gawk
 SED=/bin/sed
 
 config_file=is_able.lst

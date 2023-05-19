@@ -28,7 +28,7 @@
 #  I check for the second; comment that code out (lines 83-84), and
 # uncomment the other style (lines 79-80), if you have the first type.
 #
-AWK=/bin/awk
+AWK=/bin/gawk
 SED=/bin/sed
 LS=/bin/ls
 ECHO=/bin/echo

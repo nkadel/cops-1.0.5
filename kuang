@@ -19,7 +19,7 @@ SH=/bin/sh
 MV=/bin/mv
 TEST=/bin/test
 ECHO=/bin/echo
-AWK=/bin/awk
+AWK=/bin/gawk
 RM=/bin/rm
 
 # Initialization.

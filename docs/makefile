@@ -17,8 +17,8 @@ ROFFLAGS   = -ms
 #
 # Where the programs are....
 #
-NROFF=/usr/bin/nroff
-RM=/bin/rm -f
+NROFF=/bin/nroff
+RM=/bin/rm
 
 # make all
 all:	$(DOCS) $(MAN)

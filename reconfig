@@ -205,5 +205,5 @@ for i in $shell_scripts
 	$MV $i.new $i
 	# finally, make sure everything is back to executable status
 	$CHMOD u+x $i
-
 done
+chmod a-x docs/makefile

@@ -16,7 +16,7 @@
 # 
 DIFF=/bin/diff
 TEST=/bin/test
-AWK=/bin/awk
+AWK=/bin/gawk
 LS=/bin/ls
 RM=/bin/rm
 ECHO=/bin/echo

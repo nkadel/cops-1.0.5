@@ -29,10 +29,10 @@
 #
 
 #  Location of stuff:
-AWK=/bin/awk
+AWK=/bin/gawk
 SED=/bin/sed
 ECHO=/bin/echo
-EGREP=/usr/bin/egrep
+EGREP=/bin/egrep
 TEST=/bin/test
 CAT=/bin/cat
 

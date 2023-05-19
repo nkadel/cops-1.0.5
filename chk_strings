@@ -16,13 +16,13 @@
 #  For the first two, I simply test the writability; for the last, I
 # parse it into seperate paths and check each one in turn.
 #
-AWK=/bin/awk
+AWK=/bin/gawk
 SED=/bin/sed
-EGREP=/usr/bin/egrep
+EGREP=/bin/egrep
 TEST=/bin/test
 ECHO=/bin/echo
-SORT=/usr/bin/sort
-STRINGS=/usr/ucb/strings
+SORT=/bin/sort
+STRINGS=/bin/strings
 
 if test ! -s $STRINGS
 	then

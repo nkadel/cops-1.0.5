@@ -35,7 +35,7 @@ YP=NO
 # Locations of commands
 DIFF=/bin/diff
 CMP=/bin/cmp
-AWK=/bin/awk
+AWK=/bin/gawk
 TEST=/bin/test
 CP=/bin/cp
 MV=/bin/mv

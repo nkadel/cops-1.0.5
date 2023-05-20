@@ -4,10 +4,11 @@
 #	make all	    -- makes everything
 #	make install	    -- puts things in their place
 #	make <program_name> -- make a given program
-INSTALL_DIR= sun
+#INSTALL_DIR= sun
+INSTALL_DIR= bin
 
-EXECUTABLE = home.chk user.chk pass.chk is_writable crc crc_check \
-	     addto clearfiles filewriters members tilde is_able
+EXECUTABLE = home.chk user.chk is_writable crc crc_check \
+	     addto clearfiles filewriters members tilde is_able  pass.chk 
 C_SRC      = home.chk.c user.chk.c is_able.c pass.c is_something.c \
 	     addto.c clearfiles.c filewriters.c members.c tilde.c \
 	     crc.c crc_check.c
@@ -26,7 +27,8 @@ CFLAGS     = -O
 
 #  Certain systems need to uncomment this to compile the pass.chk; Xenix,
 # some SysV:
-# BRAINDEADFLAGS = -lcrypt
+# Needed for RHEL8
+BRAINDEADFLAGS = -lcrypt
 #
 # systems without rindex need to uncomment this:
 # CRC_FLAG=-Dstrrchr=rindex
@@ -66,43 +68,43 @@ install:
 
 # make the programs
 addto: src/addto.c
-	$(CC) $(CFLAGS) -o addto src/addto.c
+	$(CC) $(CFLAGS) -o $@ $?
 
 clearfiles: src/clearfiles.c
-	$(CC) $(CFLAGS) -o clearfiles src/clearfiles.c
+	$(CC) $(CFLAGS) -o $@ $?
 
 filewriters: src/filewriters.c
-	$(CC) $(CFLAGS) -o filewriters src/filewriters.c
+	$(CC) $(CFLAGS) -o $@ $?
 
 members: src/members.c
-	$(CC) $(CFLAGS) -o members src/members.c
+	$(CC) $(CFLAGS) -o $@ $?
 
 home.chk: src/home.chk.c
-	$(CC) $(CFLAGS) -o home.chk src/home.chk.c
+	$(CC) $(CFLAGS) -o $@ $?
 
 user.chk: src/user.chk.c
-	$(CC) $(CFLAGS) -o user.chk src/user.chk.c
+	$(CC) $(CFLAGS) -o $@ $?
 
 is_able: src/is_able.c
-	$(CC) $(CFLAGS) -o is_able src/is_able.c
+	$(CC) $(CFLAGS) -o $@ $?
 
 is_writable: src/is_something.c
-	$(CC) $(CFLAGS) -DWRITABLE -o is_writable src/is_something.c
+	$(CC) $(CFLAGS) -DWRITABLE -o $@ $?
 
 #   If fast crypt will work, comment the first CC line, uncomment
 # the next two:
 pass.chk: src/pass.c
-	$(CC) $(CFLAGS) -o pass.chk src/pass.c $(BRAINDEADFLAGS)
-# 	$(CC) $(CFLAGS) -Dcrypt=fcrypt -DFCRYPT -o pass.chk src/pass.c \
+	$(CC) $(CFLAGS) $(BRAINDEADFLAGS) -o $@ $?
+# 	$(CC) $(CFLAGS) -Dcrypt=fcrypt -DFCRYPT -o $@ \
 # 	src/crack-fcrypt.c src/crack-lib.c $(BRAINDEADFLAGS)
 
 tilde: src/tilde.c
-	$(CC) $(CFLAGS) -o tilde src/tilde.c
+	$(CC) $(CFLAGS) -o $@ $?
 
 crc: src/crc.c
-	$(CC) $(CFLAGS) -o crc src/crc.c $(SEQFLAGS)
+	$(CC) $(CFLAGS) -o $@ $(SEQFLAGS) $?
 
 crc_check: src/crc_check.c
-	$(CC) $(CFLAGS) $(CRC_FLAG) -o crc_check src/crc_check.c $(SEQFLAGS)
+	$(CC) $(CFLAGS) $(CRC_FLAG) -o $@$(SEQFLAGS) $?
 
 # the end

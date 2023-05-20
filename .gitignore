@@ -1,6 +1,8 @@
 
 *.old
+*.out
 addto
+bin
 clearfiles
 crc
 crc_check
@@ -12,5 +14,6 @@ include.out~
 is_able
 is_writable
 members
+pass.chk
 tilde
 user.chk

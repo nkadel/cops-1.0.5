@@ -2,12 +2,16 @@
 #include <pwd.h>
 #include <ctype.h>
 
+/* Added for RHEL 8 */
+#include <crypt.h>
+#include <string.h>
+
 /* C2 stuff by Ole H. Nielsen */
 #ifdef C2
 #include <sys/label.h>
 #include <sys/audit.h>
 #include <pwdadj.h>
-#endif C2
+#endif
 
 /* number of words the dictionary can suck up */
 #define ARB_CONST	32000
@@ -282,7 +286,7 @@ chkpw()
 #ifdef C2
     struct passwd_adjunct *pwdadj;
     struct passwd_adjunct *getpwanam();
-#endif C2
+#endif
     register char	*cp, *cp2;
     struct passwd	*pwd;
     struct passwd	*getpwent();
@@ -362,7 +366,7 @@ int i;
 			/* Substitute the C2 secure password */
 			pwd->pw_passwd = pwdadj->pwa_passwd;
 	}
-#endif C2
+#endif
 
 	if (*pwd->pw_passwd == '\0') {
 	    if (chknulls) {
@@ -722,7 +726,9 @@ Uucp: {ames,decwrl,harvard,rutgers,ucbvax,uunet}!wsmr-simtel20.army.mil!w8sdz
  * NULL if not found
  */
 
+#ifndef NULL
 #define	NULL	0
+#endif
 
 char *
 my_index(sp, c)

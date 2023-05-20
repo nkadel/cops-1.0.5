@@ -24,7 +24,7 @@ RM=/bin/rm
 all:	$(DOCS) $(MAN)
 
 clean:
-	$(RM) $(DOCS) $(MAN)
+	$(RM) -f $(DOCS) $(MAN)
 
 # 'roff out those docs
 COPS.report.ms: COPS.report

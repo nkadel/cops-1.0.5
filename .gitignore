@@ -1,2 +1,16 @@
+
 *.old
+addto
+clearfiles
+crc
+crc_check
 file.paths
+filewriters
+home.chk
+include.out
+include.out~
+is_able
+is_writable
+members
+tilde
+user.chk
